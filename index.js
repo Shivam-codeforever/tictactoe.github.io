@@ -42,6 +42,7 @@ const checkWin = ()=>{
             document.getElementById("info").innerText  = boxtexts[e[0]].innerText + " WON";
             gameover = true;
             turn = "";
+            document.getElementsByTagName("img")[0].src = 'img.gif';
             document.getElementsByTagName("img")[0].style.width = "6em";
             won.play();
 
