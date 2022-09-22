@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Chettan 2', cursive;
+    /* font-size: 20px;s */
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    
+}
+.nav{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    /* background-color: violet; */
+}
+.container2{
+    /* background-color: rgb(237, 223, 240); */
+    background: url('new.jpg') cover no-repeat ;
+    /* border: 2px solid blue; */
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game{
+    display: flex;
+    /* grid-template-columns: 34% 34% 34%; */
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 17em;
+    height: 17em;
+    margin: 0 2em;
+    /* grid-template-rows: repeat(3em , 3); */
+}
+.items{
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 4em;
+}
+.main{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    
+}
+/* .items:hover{
+    background-color:rgb(214, 193, 219) ;
+} */
+.gameinfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    width: 8em;
+    height: 17em;
+}
+#info{
+    margin: 2em 0px;
+    font-size: 1.5em;
+    /* border: 2px solid red; */
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid yellow; */
+}
+.img img{
+    /* display: none; */
+    width: 0;
+    transition: width 0.5s ease-in-out;
+    height: 6em;
+    margin: 1em 0;
+}
+.maininfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn{
+    margin: 1em 0;
+    width: 6em;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+    height: 2em;
+    transition: box-shadow 0.5s;
+    /* border: 2px solid blue; */
+    box-shadow: 2px 2px 4px black;
+}
+.btn:hover{
+}
+.bl{
+    border-left: none;
+}
+.bt{
+    border-top: none;
+}
+.br{
+    border-right: none;
+}
+.bb{
+    border-bottom: none;
+}
+@media  screen and (max-width:700px) {
+    .main{
+        flex-direction: column;
+        
+    }
+    .gameinfo{
+        /* display: flex; */
+        /* justify-content: center; */
+        flex-direction: row;
+        margin-top: 2em;
+        width: 17em;
+        height: 6em;
+    }
+    #info{
+        font-size: 1.5em;
+    }
+    .maininfo{
+        margin: 0 1em;
+    }
+}
