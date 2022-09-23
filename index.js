@@ -47,30 +47,11 @@ const checkWin = ()=>{
             won.play();
 
         }
-        // if( gameover === false && boxtexts[e[0]].innerText !== ""){
-        //     // document.getElementById("info").innerText = "TIE";
-        //     console.log("INTIE");
-        // }
-        //  if(( (gameover === false) && (boxtexts[e[0]].innerText === boxtexts[e[1]].innerText) && (boxtexts[e[2]].innerText !== boxtexts[e[1]].innerText) && (boxtexts[e[0]].innerText !== "") && (boxtexts[e[1]].innerText !== "") && (boxtexts[e[2]].innerText !== "")
-
-        //  || (boxtexts[e[0]].innerText !== boxtexts[e[1]].innerText) && (boxtexts[e[2]].innerText === boxtexts[e[1]].innerText) && (boxtexts[e[0]].innerText !== "") && (boxtexts[e[1]].innerText !== "") && (boxtexts[e[2]].innerText !== "")
-        //  || (boxtexts[e[0]].innerText !== boxtexts[e[1]].innerText) && (boxtexts[e[2]].innerText !== boxtexts[e[1]].innerText) && (boxtexts[e[0]].innerText !== "") && (boxtexts[e[1]].innerText !== "") (boxtexts[e[2]].innerText !== "")))
-        //  {   
-        //     //  document.getElementById("info").innerText = "TIE";
-        //     console.log("INTIE");
-        //  }
-        // else {
-        //     document.getElementById("info").innerText = "TIE";
-        // }
-        // if((boxtexts[e].innerText !== "")){
-        //     console.log("inTie");
-        // }
+        
     })
 }
 
-// const fun = ()=>{
 
-// }
 reset.addEventListener('click', ()=>{
     var restart = new Audio('Restart.mp3');
     let boxtexts = document.querySelectorAll(".boxtext");
@@ -86,15 +67,7 @@ reset.addEventListener('click', ()=>{
     })
 })
 
-// const checkTie = () => {
-//      let boxtexts = document.querySelectorAll(".boxtext");
-//     //   let box = documnet.getElementsByClassName(".items");
-//       boxtexts.forEach(e =>{
-//            if(gameover === false && boxtexts[e].innerText !==""){
-//                 console.log("inTie");
-//            }
-//      })
-//  }
+
 
 const checkTie = () =>{
     var tie = new Audio('tie.mp3');
@@ -103,17 +76,14 @@ const checkTie = () =>{
     let new1 = 0;
     for(i=0; i<boxes.length ;i++){
         if( (boxtexts[i].innerText === "X" || boxtexts [i].innerText === "O")  ){
-            // document.getElementById("info").innerText = "TIE";
-            console.log("intie");
             new1 = new1 + 1;
             }
         
     }
     if(new1 === 9 && gameover === false){
-        console.log("TIE");
+        document.getElementsByTagName("img")[0].src = 'img2.gif';
         document.getElementById("info").innerText = "TIE";
         gameover = true;
-        document.getElementsByTagName("img")[0].src = 'img2.gif';
         document.getElementsByTagName("img")[0].style.width = "6em";
         tie.play();
     }
