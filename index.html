@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="f.png" type="image/x-icon">
-    <title>TIC TAC TOE | Online</title>
+    <link rel="stylesheet" href="index.css">
+    <title>TIC TAC TOE  |  Online</title>
 </head>
-
 <body>
     <div class="container">
         <div class="nav">
@@ -20,43 +18,59 @@
                 <div class="game">
                     <div class="a1">
                         <div class="items "><span class="boxtext"></span></div>
-                        <div class="items "><span class="boxtext"></span></div>
-                        <div class="items "><span class="boxtext"></span></div>
+                    <div class="items "><span class="boxtext"></span></div>
+                    <div class="items "><span class="boxtext"></span></div>
                     </div>
 
                     <div class="a2">
                         <div class="items "><span class="boxtext"></span></div>
-                        <div class="items "><span class="boxtext"></span></div>
-                        <div class="items "><span class="boxtext"></span></div>
-
-                    </div>
-                    <div class="a3">
-                        <div class="items "><span class="boxtext"></span></div>
-                        <div class="items  "><span class="boxtext"></span></div>
-                        <div class="items "><span class="boxtext"></span></div>
-
-                    </div>
-                </div>
+                    <div class="items "><span class="boxtext"></span></div>
+                    <div class="items "><span class="boxtext"></span></div>
+                   
+                    </div> 
+             <div class="a3">
+                <div class="items "><span class="boxtext"></span></div>
+                    <div class="items  "><span class="boxtext"></span></div>
+                    <div class="items "><span class="boxtext"></span></div>
+             
+             </div>  
+             </div>
                 <div class="gameinfo">
+                    
                     <div class="img">
                         <img src="img.gif" alt="">
                     </div>
                     <div class="maininfo">
                         <div>
                             <span id="info">Turn For X</span>
-
+                        
                         </div>
-
-                        <div">
-                            <button class="btn" type="button" id="reset">Reset</button>
+                         
+                        <button class="btn" type="button" id="reset" >Reset</button>
+                        <button class="btn" type="button" onclick="changeScript()" id="script" >Player</button>
+                        </div>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
     </div>
-    </div>
-    <script src="index.js" id="scrip">
+    <script src="index.js">
+
+    </script>
+    <script>
+        var x = new Audio("x.mp3");
+        let num = 0
+        const changeScript = () =>{
+            if(document.getElementById("script").innerText === "Player" && num%2 === 0){
+                document.getElementById("script").innerText = "Computer";
+                x.play();
+            }
+            if(document.getElementById("script").innerText === "Computer" && num%2 !== 0){
+                document.getElementById("script").innerText = "Player";
+                x.play();
+            }
+            num++;
+        };
     </script>
 </body>
-
 </html>
