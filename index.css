@@ -118,6 +118,13 @@
   flex-direction: column;
   color: white;
 }
+.newbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
 .btn {
   margin: 1em 1em;
   width: 6em;
@@ -162,5 +169,8 @@
   }
   .maininfo {
     margin: 0 1em;
+  }
+  .newbtn{
+    flex-direction: row;
   }
 }
